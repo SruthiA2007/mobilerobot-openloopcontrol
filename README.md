@@ -67,7 +67,9 @@ if __name__ == '__main__':
 ![robo](./img/robomaster.png)
 
 ## Insert image here
-![Uploading image.png…]()
+<img width="726" height="548" alt="image" src="https://github.com/user-attachments/assets/ec170add-ac81-4632-8486-ec7f3bdbd561" />
+
+
 
 
 
