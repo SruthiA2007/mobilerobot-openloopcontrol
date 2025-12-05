@@ -35,29 +35,147 @@ from robomaster import robot
 import time
 from robomaster import camera
 
-if __name__ == '__main__':
+if name == 'main':
     ep_robot = robot.Robot()
     ep_robot.initialize(conn_type="ap")
+
     ep_chassis = ep_robot.chassis
     ep_led = ep_robot.led
     ep_camera = ep_robot.camera
 
     print("Video streaming started.....")
-    ep_camera.start_video_stream(display=True, resolution=camera.STREAM_360P)
+    ep_camera.start_video_stream(display=True, resolution = camera.STREAM_360P)
+    '''
+    x = x-axis movement distance,( meters) [-5,5]
+    y = y-axis movement distance,( meters) [-5,5]
+    z = rotation about z axis ( degree)[-180,180]
+    xy_speed = xy axis movement speed,( unit meter/second) [0.5,2]
+    '''
+    ep_chassis.move(x=2.7, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
 
-    actions = [
-        [2.3, 0, 0, 0.5, 255, 153, 204],
-        [0.5, 0, 45, 0.6, 255, 153, 20]
-    ]
+  
+    ep_chassis.move(x=0, y=0, z=30, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
 
-    for a in actions:
-        x, y, z, xy_speed, r, g, b = a
-        ep_chassis.move(x=x, y=y, z=z, xy_speed=xy_speed).wait_for_completed()
-        ep_led.set_led(comp="all", r=r, g=g, b=b, effect="on")
-        time.sleep(4)
+    ep_chassis.move(x=0.4, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
 
+    ep_chassis.move(x=0, y=0, z=40, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.45, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=30, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.3, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=30, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.4, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=30, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=10, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=1.4, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=-30, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=-20, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+    
+    ep_chassis.move(x=0.75, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=-50, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.2, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=20, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.23, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=20, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.2, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.2, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=20, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=1, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=30, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.32, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=30, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.2, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+    
+    ep_chassis.move(x=1, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.2, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+     
+    ep_chassis.move(x=0, y=0, z=20, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.3, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=30, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.3, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=15, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0.1, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0.2, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+     
+    ep_chassis.move(x=0, y=0, z=10, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+    
+    ep_chassis.move(x=0.08, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    ep_chassis.move(x=0, y=0, z=0, xy_speed=1).wait_for_completed()
+    ep_led.set_led(comp = "all",r=255,g=100,b=0,effect="on")
+
+    time.sleep(4)
     ep_camera.stop_video_stream()
     print("Stopped video streaming.....")
+
     ep_robot.close()
 
 ```
